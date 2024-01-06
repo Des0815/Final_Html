@@ -1,0 +1,423 @@
+ul { 
+  margin: 0px auto 0; 
+  padding: 0; 
+  list-style: none; 
+  display: table;
+  width: 600px;
+  text-align: center;
+}
+
+li { 
+  display: table-cell; 
+  position: relative; 
+  padding: 15px 0;
+}
+
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;     
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after { 
+  width: 100%; 
+  left: 0;
+  background-color: #4c5f78;
+}
+
+
+@media (pointer: fine) {
+.cursor {
+display: block;
+}
+}
+
+.cursor2 {
+--size: 2px;
+transition-duration: 0.7s;
+}
+
+
+
+nav ul {
+  list-style: none; 
+  padding: 0; 
+  display: flex; 
+}
+
+nav li {
+  margin-right: 20px; 
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #b4bac1; 
+}
+
+#myHeader {
+  position: fixed;
+  width: 100%;
+  top: 0; /* 確保在頁面頂部 */
+  transition: transform 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 1;  /* 確保導航列初始狀態可見 */
+  visibility: visible;
+  z-index: 1000;
+}
+
+/* 當需要隱藏導航列時，將 #myHeader 加上 .hidden 類 */
+#myHeader.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;  
+}
+
+
+.top-nav {
+  color: #ffffff; 
+  background-color: #000000; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; 
+}
+
+header h2 {
+  background-color: #000000; 
+  margin: 0;
+  padding: 10px; 
+  text-align: left; 
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.text-container-above-carousel {
+  display: flex;
+  flex-direction: column; /* 將子元素垂直排列 */
+  align-items: flex-start; /* 將文本對齊到左側 */
+  text-align: left;
+  font-family: Arial, sans-serif; /* 設置字體 */
+  font-size: 16px; /* 設置字體大小 */
+  line-height: 3.0; /* 設置行高 */
+  color: #ffffff; /* 設置文字顏色 */
+  margin: 50px auto; /* 上下保持50px間隔，左右自動調整以實現居中 */
+  width: calc(100% - 100px); /* 減去左邊距後的寬度 */
+  padding: 0px; /* 內邊距保持為0 */
+  font-weight: bold;
+}
+
+.background-container {
+  position: absolute; /* 或其他適合您布局的定位方式 */
+  top: 829px; /* 設置適當的位置 */
+  left: 0;
+  width: 100%; /* 根據需要調整寬度 */
+  height: 230px; /* 根據需要調整高度 */
+  background-color: #1b1b1b; /* 設置背景色 */
+  z-index: -1; /* 確保背景在內容之後 */
+}
+
+.center-image,
+.right-image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+body{
+	font-family: 'Poppins', sans-serif;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+	line-height: 1.7;
+	color: #c4c3ca;
+	background-color: #1f2029;
+	overflow-x: hidden;
+}
+a {
+	cursor: pointer;
+  transition: all 200ms linear;
+}
+a:hover {
+	text-decoration: none;
+}
+.link {
+  color: #c4c3ca;
+}
+.link:hover {
+  color: #ffeba7;
+}
+p {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7;
+}
+h4 {
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.section{
+  position: relative;
+  width: 100%;
+  display: block;
+
+}
+.full-height{
+  min-height: 100vh;
+}
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) + label{
+
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 60px;
+  height: 16px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 200px auto;
+  cursor: pointer;
+  background-color: #ffeba7;
+}
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before{
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #ffeba7;
+  background-color: #102770;
+  font-family: 'unicons';
+  content: '';
+  background-image: url('switch.png');
+  background-size: cover;
+  z-index: 20;
+  top: -10px;
+  left: -10px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s ease;
+}
+.checkbox:checked + label:before {
+  transform: translateX(44px) rotate(-270deg);
+}
+
+
+.card-3d-wrap {
+  position: relative;
+  width: 440px;
+  max-width: 100%;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  margin-top: 60px;
+}
+.card-3d-wrapper {
+  width: 100%;
+  height: 100%;
+  position:absolute;    
+  top: 0;
+  left: 0;  
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease-out; 
+}
+.card-front, .card-back {
+  margin-top: -160px;
+  width: 100%;
+  height: 100%;
+  background-color: #2a2b38;
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.checkbox:checked ~ .card-3d-wrap .card-3d-wrapper {
+  transform: rotateY(180deg);
+}
+.center-wrap{
+  position: absolute;
+  width: 100%;
+  padding: 0 35px;
+  top: 50%;
+  left: 0;
+  transform: translate3d(0, -50%, 35px) perspective(100px);
+  z-index: 20;
+  display: block;
+}
+
+
+.form-group{ 
+  position: relative;
+  display: block;
+    margin: 10px;
+    padding: 0;
+}
+.form-style {
+  padding: 10px 20px;
+  padding-left: 55px;
+  height: 48px;
+  width: 65%;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  outline: none;
+  color: #c4c3ca;
+  background-color: #1f2029;
+  border: none;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.form-style:focus,
+.form-style:active {
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.input-icon {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 48px;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: left;
+  color: #ffeba7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.form-group input:-ms-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:-moz-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input::-webkit-input-placeholder  {
+  color: #c4c3ca;
+  opacity: 0.7;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-ms-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus:-moz-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.form-group input:focus::-webkit-input-placeholder  {
+  opacity: 0;
+  -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.btn{  
+  margin-left: 10px;
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition : all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #ffeba7;
+  color: #102770;
+  box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+}
+.btn:active,
+.btn:focus{  
+  background-color: #102770;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+.btn:hover{  
+  background-color: #102770;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+
+

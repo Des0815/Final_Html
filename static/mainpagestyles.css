@@ -1,0 +1,582 @@
+ul { 
+    margin: 0px auto 0; 
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 600px;
+    text-align: center;
+}
+
+li { 
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+}
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;     
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a:hover:after { 
+    width: 100%; 
+    left: 0;
+    background-color: #4c5f78;
+}
+
+
+@media (pointer: fine) {
+.cursor {
+display: block;
+}
+}
+
+.cursor2 {
+--size: 2px;
+transition-duration: 0.7s;
+}
+
+
+
+nav ul {
+    list-style: none; 
+    padding: 0; 
+    display: flex; 
+}
+
+nav li {
+    margin-right: 20px; 
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #b4bac1; 
+}
+
+#myHeader {
+    transition: transform 0.3s, opacity 0.5s, visibility 0.5s;
+    position: fixed;
+    width: 100%;
+    opacity: 1;  /* Ensure the header is visible by default */
+    visibility: visible;
+    z-index: 1000;
+}
+
+#myHeader.hidden {
+    transform: translateY(-100%); /* 將 header 向上滑出視窗 */
+    opacity: 0;
+    visibility: hidden;  
+}
+
+
+.top-nav {
+    color: #ffffff; 
+    background-color: #000000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; 
+}
+
+header h2 {
+    background-color: #000000; 
+    margin: 0;
+    padding: 10px; 
+    text-align: left; 
+}
+
+.hidden {
+    display: none;
+    pointer-events: none;
+}
+
+.text-container-above-carousel {
+    display: flex;
+    flex-direction: column; /* 將子元素垂直排列 */
+    align-items: flex-start; /* 將文本對齊到左側 */
+    text-align: left;
+    font-family: Arial, sans-serif; /* 設置字體 */
+    font-size: 16px; /* 設置字體大小 */
+    line-height: 3.0; /* 設置行高 */
+    color: #ffffff; /* 設置文字顏色 */
+    margin: 50px auto; /* 上下保持50px間隔，左右自動調整以實現居中 */
+    width: calc(100% - 100px); /* 減去左邊距後的寬度 */
+    padding: 0px; /* 內邊距保持為0 */
+    font-weight: bold;
+}
+
+.background-container {
+    position: absolute; /* 或其他適合您布局的定位方式 */
+    top: 829px; /* 設置適當的位置 */
+    left: 0;
+    width: 100%; /* 根據需要調整寬度 */
+    height: 230px; /* 根據需要調整高度 */
+    background-color: #1b1b1b; /* 設置背景色 */
+    z-index: -1; /* 確保背景在內容之後 */
+}
+
+.center-image,
+.right-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 新增的視頻背景 CSS 样式 */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+    #backgroundVideo {
+        position: absolute; /* 若您希望背景影片相對於某個特定元素定位，請使用 'absolute' */
+        width: 1519px; /* 設定影片的寬度 */
+        height: 830px; /* 設定影片的高度 */
+        object-fit: cover;
+        z-index: -1;
+    }
+
+#backgroundVideo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9); /* 黑色半透明遮罩 */
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .carousel-item {
+    --items: 8;
+    --width: clamp(150px, 30vw, 300px);
+    --height: clamp(200px, 40vw, 480px);
+    --initial-offset: 0; /* 預設為 0，對於特定圖片將進行調整 */
+    --x: calc((var(--active) - var(--initial-offset)) * 650%);
+    --y: calc((var(--active) - var(--initial-offset)) * -65%);
+    --rot: calc((var(--active) - var(--initial-offset)) * 120deg);
+    --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
+    overflow: hidden;
+    position: absolute;
+    z-index: var(--zIndex);
+    width: var(--width);
+    height: var(--height);
+    margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    user-select: none;
+    transform-origin: 0% 100%;
+    pointer-events: all;
+    transform: translate(var(--x), var(--y)) rotate(var(--rot));
+    transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
+  }
+  
+ .carousel-item .carousel-box {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: var(--opacity);
+    font-family: "Orelo-sw-db", serif;
+  } 
+  
+  .carousel-item .carousel-box:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5));
+  }
+  .carousel-item .title {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    bottom: 20px;
+    left: 20px;
+    transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+    font-size: clamp(20px, 3vw, 30px);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  .carousel-item .num {
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+    top: 10px;
+    left: 20px;
+    transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
+    font-size: clamp(20px, 10vw, 80px);
+  }
+
+  
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    .layout {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+  
+  .layout:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 90px;
+    width: 10px;
+    height: 100%;
+    border: 1px solid #fff;
+    border-top: none;
+    border-bottom: none;
+    opacity: 0.15;
+  }
+  .layout .box {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    color: #fff;
+    transform-origin: 0% 10%;
+    transform: rotate(-90deg);
+    font-size: 9px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+
+  .cursor {
+    position: fixed;
+    z-index: 5s;
+    top: 0;
+    left: 0;
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
+    transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
+    display: none;
+    pointer-events: none;
+  }
+
+  .image-container-above-carousel {
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 更多样式 */
+}
+
+.background-card {
+    position: absolute; /* 或其他適合您布局的定位方式 */
+    top: 1058px; /* 設置適當的位置 */
+    left: 0;
+    width: 100%; /* 根據需要調整寬度 */
+    height: 765px; /* 根據需要調整高度 */
+    background-image: url('uchichabg.png'); /* 设置背景图片 */
+    background-size: cover; /* 背景图片覆盖整个元素 */
+    background-position: center; /* 背景图片居中 */
+    background-repeat: no-repeat; /* 防止背景重复 */
+    z-index: -1; /* 確保背景在內容之後 */
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.carousel-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+}
+
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    /* 正面样式 */
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    /* 背面样式 */
+}
+
+.carousel-box:hover {
+    transform: rotateY(180deg);
+}
+
+/* 当鼠标悬停在卡片上时，隐藏边框 */
+.carousel-box:hover .card-wrapper {
+    border: 2px solid transparent;
+}
+
+button{
+    width: 230px;
+    height: 70px;
+    font-size: 36px;
+    font-family: 'HYYaKuHeiW', cursive;
+    background: linear-gradient(45deg, transparent 5%, #49667A 5%);
+    border: 0;
+    color: #ddf6fb;
+    letter-spacing: 3px;
+    line-height: 70px;  
+    box-shadow: 6px 0px 0px #EB5055;
+    outline: transparent;
+    position: relative;
+    margin-left: 640px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    
+}
+
+
+.background-button {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 或您希望的寬度 */
+    height: 300px; /* 或您希望的高度 */
+    background-color: #111111;
+    position: relative;
+  }
+
+
+button::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: '馬上購買！';
+  display: block;
+  position: absolute;
+  width: 230px;
+  height: 70px;
+  font-size: 36px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #FF2A6D 3%, #EB5055 5%, #49667A 5%);
+  text-shadow: -3px -3px 0px #31d5b7, 3px 3px 0px #EB5055;
+  clip-path: var(--slice-0);
+}
+
+button:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+.sdn-text{
+    display: flex;
+    flex-direction: column; /* 將子元素垂直排列 */
+    text-align: center;
+    font-family: Arial, sans-serif; /* 設置字體 */
+    font-size: 13px; /* 設置字體大小 */
+    line-height: 2.5; /* 設置行高 */
+    color: #ffffff; /* 設置文字顏色 */
+    margin: 50px auto; /* 上下保持50px間隔，左右自動調整以實現居中 */
+    width: calc(100% - 100px); /* 減去左邊距後的寬度 */
+    padding: 0px; /* 內邊距保持為0 */
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #4c5f78;
+  color: #ffffff;
+}
+
+ 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>關於臺西漫展</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='mainpagestyles.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='aboutusstyles.css') }}">
+
+<body>
+
+<header id="myHeader">
+    <div class="top-nav">   
+        <h2>
+            <img src="{{ url_for('static', filename='top.jpg') }}" style="width: 110px; height: 55px;">
+        </h2>
+        <nav>
+            <ul>
+                <li><a href="/mainpage">首頁</a></li>
+                <li><a href="/aboutus">關於我們</a></li>
+                <li><a href="/services">服務</a></li>
+                <li><a href="/contactus">聯係我們</a></li>
+                <li><a href="/loginregister">登入注冊</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="background-usevent"></div>
+<img src="{{ url_for('static', filename='usevent.jpg') }}" class="event-image" style="width: 110px; height: 55px;">
+
+<div class="background-aboutus"></div>
+
+</body>
+
