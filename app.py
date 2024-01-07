@@ -69,9 +69,6 @@ def success():
 
     return render_template('success.html', ticket_type=ticket_info['name'], quantity=quantity, total_price=total_price, payment_method=payment_method)
 
-@app.route('/aboutus')
-def aboutus():
-    return render_template('aboutus.html')
 
 @app.route('/loginregister')
 def loginregister():
@@ -80,17 +77,6 @@ def loginregister():
 @app.route('/buyticket')
 def buyticket():
     return render_template('buyticket.html')
-
-@app.route('/pay')
-def payment():
-    # 从会话获取购票信息
-    ticket_info = session.get('ticket_info')
-    quantity = session.get('quantity')
-    total_price = session.get('total_price')
-    payment_method = session.get('payment_method')
-
-    # 渲染 pay.html 页面并传递购票信息给模板引擎
-    return render_template('pay.html', ticket_type=ticket_info['name'], quantity=quantity, total_price=total_price, payment_method=payment_method)
 
 
 if __name__ == '__main__':

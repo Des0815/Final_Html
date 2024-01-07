@@ -1,355 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>臺西漫展2023</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='mainpagestyles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-</head>
-<body>
-
-<video autoplay muted loop id="backgroundVideo">
-    <source src="static/nrtbg.mp4" type="video/mp4">
-</video>
-
+  </head>
+  <body>
+    <video autoplay muted loop id="backgroundVideo">
+      <source src="static/nrtbg.mp4" type="video/mp4">
+    </video>
     <header id="myHeader">
-        <div class="top-nav">   
-            <h2>
-                <img src="{{ url_for('static', filename='top.jpg') }}" style="width: 110px; height: 55px;">
-            </h2>
-            <nav>
-                <ul>
-                    <li><a href="/mainpage">首頁</a></li>
-                    <li><a href="/aboutus">關於我們</a></li>
-                    <li><a href="/services">服務</a></li>
-                    <li><a href="/contactus">聯係我們</a></li>
-                    <li><a href="/loginregister">登入注冊</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="top-nav">
+        <h2>
+          <img src="{{ url_for('static', filename='top.jpg') }}" style="width: 110px; height: 55px;">
+        </h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="/mainpage">首頁</a>
+            </li>
+            <li>
+              <a href="/aboutus">關於我們</a>
+            </li>
+            <li>
+              <a href="/services">服務</a>
+            </li>
+            <li>
+              <a href="/contactus">聯係我們</a>
+            </li>
+            <li>
+              <a href="/loginregister">登入注冊</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    
     <div class="image-container-above-carousel">
-        <img src="{{ url_for('static', filename='ticketshow.png') }}" style="width: 850px; height: 650px;">
+      <img src="{{ url_for('static', filename='ticketshow.png') }}" style="width: 850px; height: 650px;">
     </div>
-
     <div class="background-container"></div>
-
     <div class="text-container-above-carousel">
-        <p>• 臺西漫展2023 门票采用 RFID 卡形式（称为“通行证”），根据购买的门票类别，带有唯一的二维码。</p>
-        <p>• 2023 年，所有漫画嘉年华门票将仅接受预订，活动期间不会出售任何门票。</p>
-        <p>• 不论类别，每位顾客最多只能购买 5 张门票。</p>
-        <p>• 门票将于 2023 年 10 月 18 日星期三中午开始销售。</p>
+      <p>• 臺西漫展2023 门票采用 RFID 卡形式（称为“通行证”），根据购买的门票类别，带有唯一的二维码。</p>
+      <p>• 2023 年，所有漫画嘉年华门票将仅接受预订，活动期间不会出售任何门票。</p>
+      <p>• 不论类别，每位顾客最多只能购买 5 张门票。</p>
+      <p>• 门票将于 2023 年 10 月 18 日星期三中午开始销售。</p>
     </div>
-
-    <div class="background-card"></div> 
+    <div class="background-card"></div>
     <div class="carousel">
-        
-    <div class="carousel-item hidden">
+      <div class="carousel-item hidden">
         <div class="card">
-            <div class="carousel-box">
+          <div class="carousel-box">
             <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
+              <img src="{{ url_for('static', filename='01.png') }}" />
             </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+          </div>
         </div>
-    </div>
-    
-    <div class="carousel-item hidden">
+      </div>
+      <div class="carousel-item hidden">
         <div class="card">
-            <div class="carousel-box">
+          <div class="carousel-box">
             <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
+              <img src="{{ url_for('static', filename='01.png') }}" />
             </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="carousel-item">
+      </div>
+      <div class="carousel-item">
         <div class="card">
-            <div class="carousel-box">
+          <div class="carousel-box">
             <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='01bg.png') }}" />
-                </div>
+              <img src="{{ url_for('static', filename='01.png') }}" />
             </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='01bg.png') }}" />
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="carousel-item">
-
-    <div class="card">
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='02.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='02bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='03.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='03bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='04.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='04bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item hidden">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='01.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item hidden">
         <div class="carousel-box">
-        <div class="card-face card-front">
-        <img src="{{ url_for('static', filename='02.png') }}" />
-            </div>
-        <div class="card-face card-back">
-        <img src="{{ url_for('static', filename='02bg.png') }}" />
-            </div>
+          <img src="{{ url_for('static', filename='real01.png') }}" />
         </div>
-    </div>
-    </div>
-    
-    <div class="carousel-item">
-        <div class="card">
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='03.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='03bg.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-item"> 
-        <div class="card">
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='04.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='04bg.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-item">
-        <div class="card">
-            
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
-
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05bg.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-item hidden">
-        <div class="card">
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="carousel-item hidden">
+      </div>
+      <div class="carousel-item hidden">
         <div class="carousel-box">
-            <img src="{{ url_for('static', filename='real01.png') }}" />
+          <img src="{{ url_for('static', filename='real01.png') }}" />
         </div>
+      </div>
     </div>
-
-    <div class="carousel-item hidden">
-        <div class="carousel-box">
-            <img src="{{ url_for('static', filename='real01.png') }}" />
-        </div>
-    </div> 
-    </div>
-
-    
-    <div class="background-button">  
-        <li onclick="location.href='buyticket';" style="cursor: pointer;">
-            <button>馬上購票！</button>
+    <div class="background-button">
+      <li onclick="location.href='buyticket';" style="cursor: pointer;">
+        <button>馬上購票！</button>
+      </li>
+      <div class="sdn-text">
+        <p> 本文引用的所有商标均为其各自所有者的财产。</p>
+        <p> © 臺西漫展嘉年華。版权所有。</p>
+        <p> 臺西漫展嘉年華有限公司 (1023686-G)</p>
+      </div>
+      <ul class="wrapper">
+        <li class="icon facebook">
+          <span class="tooltip">Facebook</span>
+          <span>
+            <i class="fab fa-facebook-f"></i>
+          </span>
         </li>
-            
-        <div class="sdn-text">  
-            <p> 本文引用的所有商标均为其各自所有者的财产。</p>
-            <p> © 臺西漫展嘉年華。版权所有。</p>
-            <p> 臺西漫展嘉年華有限公司 (1023686-G)</p>
-        </div>
-
-        <ul class="wrapper">
-            <li class="icon facebook" onclick="window.location.href='http://127.0.0.1:5000/facebook';">
-              <span class="tooltip">Facebook</span>
-              <span><i class="fab fa-facebook-f"></i></span>
-            </li>
-            <li class="icon facebook" onclick="window.location.href='http://127.0.0.1:5000/twitter';">
-              <span class="tooltip">Twitter</span>
-              <span><i class="fab fa-twitter"></i></span>
-            </li>
-            <li class="icon facebook" onclick="window.location.href='http://127.0.0.1:5000/instagram';">
-              <span class="tooltip">Instagram</span>
-              <span><i class="fab fa-instagram"></i></span>
-            </li>
-            <li class="icon facebook" onclick="window.location.href='http://127.0.0.1:5000/youtube';">
-              <span class="tooltip">Youtube</span>
-              <span><i class="fab fa-youtube"></i></span>
-            </li>
-          </ul> 
+        <li class="icon facebook">
+          <span class="tooltip">Twitter</span>
+          <span>
+            <i class="fab fa-twitter"></i>
+          </span>
+        </li>
+        <li class="icon facebook">
+          <span class="tooltip">Instagram</span>
+          <span>
+            <i class="fab fa-instagram"></i>
+          </span>
+        </li>
+        <li class="icon facebook">
+          <span class="tooltip">Youtube</span>
+          <span>
+            <i class="fab fa-youtube"></i>
+          </span>
+        </li>
+      </ul>
     </div>
-
     <div class="cursor"></div>
     <div class="cursor cursor2"></div>
-
     <script>
-    /*--------------------
+      /*--------------------
     Vars
     --------------------*/
-    let progress = 50
-    let startX = 0
-    let active = 0
-    let isDown = false
-
-    /*--------------------
-    Get Z
-    --------------------*/
-    const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
-
-    /*--------------------
-    Items
-    --------------------*/
-    const $items = document.querySelectorAll('.carousel-item')
-    const $cursors = document.querySelectorAll('.cursor')
-
-    const displayItems = (item, index, active) => {
+      let progress = 50
+      let startX = 0
+      let active = 0
+      let isDown = false
+      /*--------------------
+      Get Z
+      --------------------*/
+      const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
+      /*--------------------
+      Items
+      --------------------*/
+      const $items = document.querySelectorAll('.carousel-item')
+      const $cursors = document.querySelectorAll('.cursor')
+      const displayItems = (item, index, active) => {
         const zIndex = getZindex([...$items], active)[index]
         item.style.setProperty('--zIndex', zIndex)
-        item.style.setProperty('--active', (index-active)/$items.length)
-    }
-
-    /*--------------------
-    Animate
-    --------------------*/
-    const animate = () => {
+        item.style.setProperty('--active', (index - active) / $items.length)
+      }
+      /*--------------------
+      Animate
+      --------------------*/
+      const animate = () => {
         progress = Math.max(0, Math.min(progress, 100))
-        active = Math.floor(progress/100*($items.length-1))
-        
+        active = Math.floor(progress / 100 * ($items.length - 1))
         $items.forEach((item, index) => displayItems(item, index, active))
       }
       animate()
-
-    /*--------------------
-    Click on Items
-    --------------------*/
-    $items.forEach((item, i) => {
+      /*--------------------
+      Click on Items
+      --------------------*/
+      $items.forEach((item, i) => {
         item.addEventListener('click', () => {
-          progress = (i/$items.length) * 100 + 10
+          progress = (i / $items.length) * 100 + 10
           animate()
         })
       })
-
-
-const handleMouseMove = (e) => {
-  if (e.type === 'mousemove') {
-    $cursors.forEach(($cursor) => {
-      $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
-    })
-  }
-  if (!isDown) return
-  const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
-  const mouseProgress = (x - startX) * speedDrag
-  progress = progress + mouseProgress
-  startX = x
-  animate()
-}
-
-const handleMouseDown = e => {
-  isDown = true
-  startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
-}
-
-const handleMouseUp = () => {
-  isDown = false
-}
-
-/*--------------------
-Listeners
---------------------*/
-document.addEventListener('mousedown', handleMouseDown)
-document.addEventListener('mousemove', handleMouseMove)
-document.addEventListener('mouseup', handleMouseUp)
-document.addEventListener('touchstart', handleMouseDown)
-document.addEventListener('touchmove', handleMouseMove)
-document.addEventListener('touchend', handleMouseUp)
-
-let lastScrollTop = 0;
-const header = document.getElementById("myHeader");
-
-window.addEventListener("scroll", function() {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-        // 向下滾動
-        header.classList.add("hidden");
-    } else {
-        // 向上滾動
-        header.classList.remove("hidden");
-    }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 避免出現負值
-}, false);
-
-// 点击事件监听器
-$items.forEach((item, i) => {
-    item.addEventListener('click', () => {
-        // 更新进度
-        progress = (i / $items.length) * 100 + 10;
-        animate();
-    
-        // 移除其他项的 'active' 类
-        $items.forEach(item => item.classList.remove('active'));
-    
-        // 为当前点击的项添加 'active' 类
-        item.classList.add('active');
-    })
-})
-
-// 确保初始化时第一个元素有 'active' 类
-$items[0].classList.add('active');   
-
-document.querySelectorAll('.carousel-box').forEach(box => {
-    box.addEventListener('transitionend', (e) => {
-        // 确保事件来源是 transform 属性
-        if (e.propertyName === 'transform') {
+      const handleMouseMove = (e) => {
+        if (e.type === 'mousemove') {
+          $cursors.forEach(($cursor) => {
+            $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+          })
+        }
+        if (!isDown) return
+        const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
+        const mouseProgress = (x - startX) * speedDrag
+        progress = progress + mouseProgress
+        startX = x
+        animate()
+      }
+      const handleMouseDown = e => {
+        isDown = true
+        startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
+      }
+      const handleMouseUp = () => {
+        isDown = false
+      }
+      /*--------------------
+      Listeners
+      --------------------*/
+      document.addEventListener('mousedown', handleMouseDown)
+      document.addEventListener('mousemove', handleMouseMove)
+      document.addEventListener('mouseup', handleMouseUp)
+      document.addEventListener('touchstart', handleMouseDown)
+      document.addEventListener('touchmove', handleMouseMove)
+      document.addEventListener('touchend', handleMouseUp)
+      let lastScrollTop = 0;
+      const header = document.getElementById("myHeader");
+      window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+          // 向下滾動
+          header.classList.add("hidden");
+        } else {
+          // 向上滾動
+          header.classList.remove("hidden");
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 避免出現負值
+      }, false);
+      // 点击事件监听器
+      $items.forEach((item, i) => {
+        item.addEventListener('click', () => {
+          // 更新进度
+          progress = (i / $items.length) * 100 + 10;
+          animate();
+          // 移除其他项的 'active' 类
+          $items.forEach(item => item.classList.remove('active'));
+          // 为当前点击的项添加 'active' 类
+          item.classList.add('active');
+        })
+      })
+      // 确保初始化时第一个元素有 'active' 类
+      $items[0].classList.add('active');
+      document.querySelectorAll('.carousel-box').forEach(box => {
+        box.addEventListener('transitionend', (e) => {
+          // 确保事件来源是 transform 属性
+          if (e.propertyName === 'transform') {
             // 选择卡片包裹层
             const cardWrapper = box.querySelector('.card-wrapper');
-
             // 检查卡片是否已翻转
             const isFlipped = box.style.transform.includes('rotateY(180deg)');
-
             // 如果卡片已翻转，显示边框；否则隐藏边框
             cardWrapper.style.border = isFlipped ? '2px solid orange' : '2px solid transparent';
-        }
-    });
-});
-
-        var animateButton = function(e) {
-
-e.preventDefault;
-//reset animation
-e.target.classList.remove('animate');
-e.target.classList.add('animate');
-setTimeout(function(){
-  e.target.classList.remove('animate');
-},700);
-};
-
-var bubblyButtons = document.getElementsByClassName("bubbly-button");
-
-for (var i = 0; i < bubblyButtons.length; i++) {
-bubblyButtons[i].addEventListener('click', animateButton, false);
-}
-
+          }
+        });
+      });
+      var animateButton = function(e) {
+        e.preventDefault;
+        //reset animation
+        e.target.classList.remove('animate');
+        e.target.classList.add('animate');
+        setTimeout(function() {
+          e.target.classList.remove('animate');
+        }, 700);
+      };
+      var bubblyButtons = document.getElementsByClassName("bubbly-button");
+      for (var i = 0; i < bubblyButtons.length; i++) {
+        bubblyButtons[i].addEventListener('click', animateButton, false);
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,343 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>購買門票</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='buyticketstyles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-</head>
-<body>
+  </head>
+  <body>
     <header id="myHeader">
-        <div class="top-nav">   
-            <h2>
-                <img src="{{ url_for('static', filename='top.jpg') }}" style="width: 110px; height: 55px;">
-            </h2>
-            <nav>
-                <ul>
-                    <li><a href="/mainpage">首頁</a></li>
-                    <li><a href="/aboutus">關於我們</a></li>
-                    <li><a href="/services">服務</a></li>
-                    <li><a href="/contactus">聯係我們</a></li>
-                    <li><a href="/loginregister">登入注冊</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="top-nav">
+        <h2>
+          <img src="{{ url_for('static', filename='top.jpg') }}" style="width: 110px; height: 55px;">
+        </h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="/mainpage">首頁</a>
+            </li>
+            <li>
+              <a href="/aboutus">關於我們</a>
+            </li>
+            <li>
+              <a href="/services">服務</a>
+            </li>
+            <li>
+              <a href="/contactus">聯係我們</a>
+            </li>
+            <li>
+              <a href="/loginregister">登入注冊</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    
     <div class="carousel">
-
-        
-        
-    <div class="carousel-item hidden">
+      <div class="carousel-item hidden">
         <div class="card">
-            <div class="carousel-box">
+          <div class="carousel-box">
             <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
+              <img src="{{ url_for('static', filename='01.png') }}" />
             </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+          </div>
         </div>
-    </div>
-    
-    <div class="carousel-item hidden">
+      </div>
+      <div class="carousel-item hidden">
         <div class="card">
-            <div class="carousel-box">
+          <div class="carousel-box">
             <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
+              <img src="{{ url_for('static', filename='01.png') }}" />
             </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="carousel-item">
+      </div>
+      <div class="carousel-item">
         <div class="card">
-            <div class="carousel-box">
+          <div class="carousel-box">
             <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='01bg.png') }}" />
-                </div>
+              <img src="{{ url_for('static', filename='01.png') }}" />
             </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='01bg.png') }}" />
+            </div>
+          </div>
         </div>
-    </div>
-
-    <div class="carousel-item">
-
-    <div class="card">
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='02.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='02bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='03.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='03bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='04.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='04bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05bg.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item hidden">
+        <div class="card">
+          <div class="carousel-box">
+            <div class="card-face card-front">
+              <img src="{{ url_for('static', filename='01.png') }}" />
+            </div>
+            <div class="card-face card-back">
+              <img src="{{ url_for('static', filename='05.png') }}" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item hidden">
         <div class="carousel-box">
-        <div class="card-face card-front">
-        <img src="{{ url_for('static', filename='02.png') }}" />
-            </div>
-        <div class="card-face card-back">
-        <img src="{{ url_for('static', filename='02bg.png') }}" />
-            </div>
+          <img src="{{ url_for('static', filename='real01.png') }}" />
         </div>
-    </div>
-    </div>
-    
-    <div class="carousel-item">
-        <div class="card">
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='03.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='03bg.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-item"> 
-        <div class="card">
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='04.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='04bg.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-item">
-        <div class="card">
-            
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
-
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05bg.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="carousel-item hidden">
-        <div class="card">
-            <div class="carousel-box">
-            <div class="card-face card-front">
-            <img src="{{ url_for('static', filename='01.png') }}" />
-                </div>
-            <div class="card-face card-back">
-            <img src="{{ url_for('static', filename='05.png') }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="carousel-item hidden">
+      </div>
+      <div class="carousel-item hidden">
         <div class="carousel-box">
-            <img src="{{ url_for('static', filename='real01.png') }}" />
+          <img src="{{ url_for('static', filename='real01.png') }}" />
         </div>
+      </div>
     </div>
-
-    <div class="carousel-item hidden">
-        <div class="carousel-box">
-            <img src="{{ url_for('static', filename='real01.png') }}" />
-        </div>
-    </div> 
-    </div>
-
-    
-
     <div class="cursor"></div>
     <div class="cursor cursor2"></div>
-
     <div class="container text-white mx-auto w-full max-w-xl mt-10 p-4 rounded-2xl">
-        <!-- 省略其他内容 -->
-
-        <label for="ticketType">选择票种：</label>
-        <select id="ticketType">
-          <option value="weekend">23+24-周末票</option>
-          <option value="perday23">23-全天票</option>
-          <option value="perday24">24-全天票</option>
-          <option value="night23">23-夜場票</option>
-          <option value="night24">24-夜場票</option>
-        </select>
-
-        <label for="quantity">数量：</label>
-        <input id="quantity" type="number" min="1" max="10" class='w-full py-2 px-3 rounded-xl mt-1 mb-2'>
-
-        <label for="paymentMethod">付款方式：</label>
-        <select id="paymentMethod" class='w-full py-2 px-3 rounded-xl mt-1 mb-2'>
-            <option value="creditCard">信用卡或借記卡</option>
-            <option value="paypal">綫下匯款</option>
-            <option value="paypal">超商條碼付款</option>
-        </select>   
-
-        <a href="/pay" class="button-link">
-            <button>前往付款页面</button>
-        </a>    
-
-        <!-- 省略其他内容 -->
+      <!-- 省略其他内容 -->
+      <label for="ticketType">选择票种：</label>
+      <select id="ticketType">
+        <option value="weekend">23+24-周末票</option>
+        <option value="perday23">23-全天票</option>
+        <option value="perday24">24-全天票</option>
+        <option value="night23">23-夜場票</option>
+        <option value="night24">24-夜場票</option>
+      </select>
+      <label for="quantity">数量：</label>
+      <input id="quantity" type="number" min="1" max="10" class='w-full py-2 px-3 rounded-xl mt-1 mb-2'>
+      <label for="paymentMethod">付款方式：</label>
+      <select id="paymentMethod" class='w-full py-2 px-3 rounded-xl mt-1 mb-2'>
+        <option value="creditCard">信用卡或借記卡</option>
+        <option value="paypal">綫下匯款</option>
+        <option value="paypal">超商條碼付款</option>
+      </select>
+      <button>前往付款页面</button>
     </div>
-
-    <!-- 省略其他内容 -->
-
-</body>
-</html>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- 结算内容 -->
+        <h2>结算页面</h2>
+        <p>票价: <span id="ticketPrice"></span>
+        </p>
+        <p>总价: <span id="totalPrice"></span>
+        </p>
+        <button>确认支付</button>
       </div>
-
-    <script>
-    /*--------------------
+    </div>
+  </body>
+</html>
+</div>
+<script>
+  /*--------------------
     Vars
     --------------------*/
-    let progress = 50
-    let startX = 0
-    let active = 0
-    let isDown = false
-
-    /*--------------------
-    Get Z
-    --------------------*/
-    const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
-
-    /*--------------------
-    Items
-    --------------------*/
-    const $items = document.querySelectorAll('.carousel-item')
-    const $cursors = document.querySelectorAll('.cursor')
-
-    const displayItems = (item, index, active) => {
-        const zIndex = getZindex([...$items], active)[index]
-        item.style.setProperty('--zIndex', zIndex)
-        item.style.setProperty('--active', (index-active)/$items.length)
-    }
-
-    /*--------------------
-    Animate
-    --------------------*/
-    const animate = () => {
-        progress = Math.max(0, Math.min(progress, 100))
-        active = Math.floor(progress/100*($items.length-1))
-        
-        $items.forEach((item, index) => displayItems(item, index, active))
-      }
-      animate()
-
-    /*--------------------
-    Click on Items
-    --------------------*/
-    $items.forEach((item, i) => {
-        item.addEventListener('click', () => {
-          progress = (i/$items.length) * 100 + 10
-          animate()
-        })
-      })
-
-
-const handleMouseMove = (e) => {
-  if (e.type === 'mousemove') {
-    $cursors.forEach(($cursor) => {
-      $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
-    })
+  let progress = 50
+  let startX = 0
+  let active = 0
+  let isDown = false
+  /*--------------------
+  Get Z
+  --------------------*/
+  const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.length : array.length - Math.abs(index - i)))
+  /*--------------------
+  Items
+  --------------------*/
+  const $items = document.querySelectorAll('.carousel-item')
+  const $cursors = document.querySelectorAll('.cursor')
+  const displayItems = (item, index, active) => {
+    const zIndex = getZindex([...$items], active)[index]
+    item.style.setProperty('--zIndex', zIndex)
+    item.style.setProperty('--active', (index - active) / $items.length)
   }
-  if (!isDown) return
-  const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
-  const mouseProgress = (x - startX) * speedDrag
-  progress = progress + mouseProgress
-  startX = x
+  /*--------------------
+  Animate
+  --------------------*/
+  const animate = () => {
+    progress = Math.max(0, Math.min(progress, 100))
+    active = Math.floor(progress / 100 * ($items.length - 1))
+    $items.forEach((item, index) => displayItems(item, index, active))
+  }
   animate()
-}
-
-const handleMouseDown = e => {
-  isDown = true
-  startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
-}
-
-const handleMouseUp = () => {
-  isDown = false
-}
-
-/*--------------------
-Listeners
---------------------*/
-document.addEventListener('mousedown', handleMouseDown)
-document.addEventListener('mousemove', handleMouseMove)
-document.addEventListener('mouseup', handleMouseUp)
-document.addEventListener('touchstart', handleMouseDown)
-document.addEventListener('touchmove', handleMouseMove)
-document.addEventListener('touchend', handleMouseUp)
-
-let lastScrollTop = 0;
-const header = document.getElementById("myHeader");
-
-window.addEventListener("scroll", function() {
+  /*--------------------
+  Click on Items
+  --------------------*/
+  $items.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      progress = (i / $items.length) * 100 + 10
+      animate()
+    })
+  })
+  const handleMouseMove = (e) => {
+    if (e.type === 'mousemove') {
+      $cursors.forEach(($cursor) => {
+        $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+      })
+    }
+    if (!isDown) return
+    const x = e.clientX || (e.touches && e.touches[0].clientX) || 0
+    const mouseProgress = (x - startX) * speedDrag
+    progress = progress + mouseProgress
+    startX = x
+    animate()
+  }
+  const handleMouseDown = e => {
+    isDown = true
+    startX = e.clientX || (e.touches && e.touches[0].clientX) || 0
+  }
+  const handleMouseUp = () => {
+    isDown = false
+  }
+  /*--------------------
+  Listeners
+  --------------------*/
+  document.addEventListener('mousedown', handleMouseDown)
+  document.addEventListener('mousemove', handleMouseMove)
+  document.addEventListener('mouseup', handleMouseUp)
+  document.addEventListener('touchstart', handleMouseDown)
+  document.addEventListener('touchmove', handleMouseMove)
+  document.addEventListener('touchend', handleMouseUp)
+  let lastScrollTop = 0;
+  const header = document.getElementById("myHeader");
+  window.addEventListener("scroll", function() {
     let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
     if (currentScroll > lastScrollTop) {
-        // 向下滾動
-        header.classList.add("hidden");
+      // 向下滾動
+      header.classList.add("hidden");
     } else {
-        // 向上滾動
-        header.classList.remove("hidden");
+      // 向上滾動
+      header.classList.remove("hidden");
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 避免出現負值
-}, false);
-
-// 点击事件监听器
-$items.forEach((item, i) => {
+  }, false);
+  // 点击事件监听器
+  $items.forEach((item, i) => {
     item.addEventListener('click', () => {
-        // 更新进度
-        progress = (i / $items.length) * 100 + 10;
-        animate();
-    
-        // 移除其他项的 'active' 类
-        $items.forEach(item => item.classList.remove('active'));
-    
-        // 为当前点击的项添加 'active' 类
-        item.classList.add('active');
+      // 更新进度
+      progress = (i / $items.length) * 100 + 10;
+      animate();
+      // 移除其他项的 'active' 类
+      $items.forEach(item => item.classList.remove('active'));
+      // 为当前点击的项添加 'active' 类
+      item.classList.add('active');
     })
-})
-
-// 确保初始化时第一个元素有 'active' 类
-$items[0].classList.add('active');   
-
-document.querySelectorAll('.carousel-box').forEach(box => {
+  })
+  // 确保初始化时第一个元素有 'active' 类
+  $items[0].classList.add('active');
+  document.querySelectorAll('.carousel-box').forEach(box => {
     box.addEventListener('transitionend', (e) => {
-        // 确保事件来源是 transform 属性
-        if (e.propertyName === 'transform') {
-            // 选择卡片包裹层
-            const cardWrapper = box.querySelector('.card-wrapper');
-
-            // 检查卡片是否已翻转
-            const isFlipped = box.style.transform.includes('rotateY(180deg)');
-
-            // 如果卡片已翻转，显示边框；否则隐藏边框
-            cardWrapper.style.border = isFlipped ? '2px solid orange' : '2px solid transparent';
-        }
+      // 确保事件来源是 transform 属性
+      if (e.propertyName === 'transform') {
+        // 选择卡片包裹层
+        const cardWrapper = box.querySelector('.card-wrapper');
+        // 检查卡片是否已翻转
+        const isFlipped = box.style.transform.includes('rotateY(180deg)');
+        // 如果卡片已翻转，显示边框；否则隐藏边框
+        cardWrapper.style.border = isFlipped ? '2px solid orange' : '2px solid transparent';
+      }
     });
-});
-
-        var animateButton = function(e) {
-
-e.preventDefault;
-//reset animation
-e.target.classList.remove('animate');
-e.target.classList.add('animate');
-setTimeout(function(){
-  e.target.classList.remove('animate');
-},700);
-};
-
-var bubblyButtons = document.getElementsByClassName("bubbly-button");
-
-for (var i = 0; i < bubblyButtons.length; i++) {
-bubblyButtons[i].addEventListener('click', animateButton, false);
-}
-
-    </script>
+  });
+  var animateButton = function(e) {
+    e.preventDefault;
+    //reset animation
+    e.target.classList.remove('animate');
+    e.target.classList.add('animate');
+    setTimeout(function() {
+      e.target.classList.remove('animate');
+    }, 700);
+  };
+  var bubblyButtons = document.getElementsByClassName("bubbly-button");
+  for (var i = 0; i < bubblyButtons.length; i++) {
+    bubblyButtons[i].addEventListener('click', animateButton, false);
+  }
+  // 获取弹窗
+  var modal = document.getElementById("myModal");
+  // 获取 
+  < span > 元素， 用于关闭弹窗
+  var span = document.getElementsByClassName("close")[0];
+  // 当用户点击 
+  < span > (x)， 关闭弹窗
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  // 当用户点击其他地方，关闭弹窗
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  // 当需要显示弹窗时，调用以下代码
+  function displayModal() {
+    modal.style.display = "block";
+  }
+  const button = document.querySelector('button');
+  // 给按钮添加点击事件监听器
+  button.addEventListener('click', function() {
+    // 调用显示弹窗的函数
+    displayModal();
+  });
+  // 保存票价的对象
+  const ticketPrices = {
+    weekend: 500,
+    perday23: 300,
+    perday24: 300,
+    night23: 180,
+    night24: 180
+  };
+  // 获取选择票种和数量的元素
+  const ticketType = document.getElementById('ticketType');
+  const quantity = document.getElementById('quantity');
+  // 获取弹窗中显示票价的元素
+  const ticketPriceElement = document.getElementById('ticketPrice');
+  const totalPriceElement = document.getElementById('totalPrice'); // 新增的显示总价的元素
+  // 监听选择票种和数量的变化
+  ticketType.addEventListener('change', calculateTotalPrice);
+  quantity.addEventListener('input', calculateTotalPrice);
+  // 计算总价的函数
+  function calculateTotalPrice() {
+    const selectedTicketType = ticketType.value;
+    const ticketPrice = ticketPrices[selectedTicketType];
+    const selectedQuantity = quantity.value;
+    const totalPrice = ticketPrice * selectedQuantity;
+    // 将票价和总价显示在弹窗中
+    ticketPriceElement.textContent = `票价：NT$${ticketPrice}`;
+    totalPriceElement.textContent = `总价：NT$${totalPrice}`;
+  }
+</script>
 </body>
 </html>
