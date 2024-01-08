@@ -198,7 +198,7 @@ h4 {
   padding: 0;
   margin: 200px auto;
   cursor: pointer;
-  background-color: #ffeba7;
+  background-color: #b43c3c;
 }
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:before {
